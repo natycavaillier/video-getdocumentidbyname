@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "projeto-video-a0db7": {
+      "hosting": {
+        "projeto-video": [
+          "projeto-video-a0db7"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "projeto-video-a0db7"
+  }
+}

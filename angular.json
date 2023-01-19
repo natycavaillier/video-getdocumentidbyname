@@ -98,6 +98,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "projeto-video:build:production",
+            "firebaseProject": "projeto-video-a0db7",
+            "firebaseHostingSite": "projeto-video-a0db7"
+          }
         }
       }
     }
