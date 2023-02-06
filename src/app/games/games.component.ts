@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { collectionGroup, getDocs, getFirestore, where } from '@angular/fire/firestore';
-import { query } from '@firebase/firestore';
 import { GamesService } from '../shared/services/games.service';
 
 @Component({
@@ -14,13 +12,15 @@ export class GamesComponent implements OnInit {
     private gamesService: GamesService
   ) { }
 
-
   nameInput!: string;
 
-  async getDocumentIdByName(name: string) {
-    const id = await this.gamesService.getDocumentIdByName(name);
+  getDocumentIdByName(name: string) {
 
-    console.log(id);
+    this.gamesService.getDocumentsByName(name)
+      .subscribe((games) => {
+        console.log(games[0]['id']);
+      });
+
   }
 
 
